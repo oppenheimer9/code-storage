@@ -1,0 +1,13 @@
+document.getElementById('addCodeButton').addEventListener('click', function() {
+    const codeInput = document.getElementById('codeInput');
+    const codeList = document.getElementById('codeList');
+
+    if (codeInput.value.trim() !== '') {
+        const listItem = document.createElement('li');
+        listItem.textContent = codeInput.value;
+        codeList.appendChild(listItem);
+        codeInput.value = ''; // Clear the input
+    } else {
+        alert('Please enter some code.');
+    }
+});
